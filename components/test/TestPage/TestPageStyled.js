@@ -106,7 +106,7 @@ export const HeaderSectionWrapper = styled.div`
         right: 0;
         bottom: 0;
         opacity: 0.35;
-        background: url('http://localhost:3000/static/media/menu-bg.7a3d5432.svg') no-repeat left bottom / 55% auto;
+        background: url('img/menu-bg.svg') no-repeat left bottom / 55% auto;
     }
 `;
 
@@ -127,7 +127,7 @@ export const HeaderSectionWrapper2 = styled.div`
         right: 0;
         bottom: 0;
         opacity: 0.35;
-        background: url('http://localhost:3000/static/media/menu-bg.7a3d5432.svg') no-repeat left bottom / 55% auto;
+        background: url('img/menu-bg.svg') no-repeat left bottom / 55% auto;
     }
 `;
 
@@ -148,7 +148,7 @@ export const HeaderSectionWrapper3 = styled.div`
         right: 0;
         bottom: 0;
         opacity: 0.35;
-        background: url('http://localhost:3000/static/media/menu-bg.7a3d5432.svg') no-repeat left bottom / 55% auto;
+        background: url('img/menu-bg.svg') no-repeat left bottom / 55% auto;
     }
 `;
 
@@ -169,7 +169,7 @@ export const HeaderSectionWrapper4 = styled.div`
         right: 0;
         bottom: 0;
         opacity: 0.35;
-        background: url('http://localhost:3000/static/media/menu-bg.7a3d5432.svg') no-repeat left bottom / 55% auto;
+        background: url('img/menu-bg.svg') no-repeat left bottom / 55% auto;
     }
 `;
 
@@ -186,7 +186,7 @@ export const HeaderSectionWrapper5 = styled.div`
         right: 0;
         bottom: 0;
         opacity: 0.35;
-        background: url('http://localhost:3000/static/media/menu-bg.7a3d5432.svg') no-repeat left bottom / 55% auto;
+        background: url('img/menu-bg.svg') no-repeat left bottom / 55% auto;
     }
 `;
 
