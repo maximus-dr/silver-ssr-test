@@ -9,29 +9,65 @@ export default function Home() {
       <div className="subwrapper">
         <h1>Test</h1>
         <div className="links">
-          <Link href="/ssg">
-            <a>SSG</a>
-          </Link>
+          <div className="linkWrap">
+            <Link href="/ssg">
+              <a>SSG</a>
+            </Link>
+            <div className="description">
+              <span className="note">Статический рендеринг</span>
+            </div>
+          </div>
 
-          <Link href="/ssg" prefetch={false}>
-            <a>SSG prefetch=false</a>
-          </Link>
+          <div className="linkWrap">
+            <Link href="/ssg" prefetch={false} passHref>
+              <a>SSG</a>
+            </Link>
+            <div className="description">
+              <span className="note">Статический рендеринг prefetch=false</span>
+            </div>
+          </div>
 
-          <Link href="/ssr1">
-            <a>SSR</a>
-          </Link>
+          <div className="linkWrap">
+            <Link href="/ssr">
+              <a>SSR</a>
+            </Link>
+            <div className="description">
+              <span className="note">Динамический серверный рендеринг</span>
+              <span className="note">events хранятся локально на сервере</span>
+            </div>
+          </div>
 
-          <Link href="/ssr1" prefetch={false}>
-            <a>SSR prefetch=false</a>
-          </Link>
+          <div className="linkWrap">
+            <Link href="/ssr" prefetch={false}>
+              <a>SSR</a>
+            </Link>
+            <div className="description">
+              <span className="note">Динамический серверный рендеринг</span>
+              <span className="note">events хранятся локально на сервере</span>
+              <span className="note">prefetch=false</span>
+            </div>
+          </div>
 
-          <Link href="/ssr2">
-            <a>SSR2</a>
-          </Link>
+          <div className="linkWrap">
+            <Link href="/ssr2">
+              <a>SSR2</a>
+            </Link>
+            <div className="description">
+              <span className="note">Динамический серверный рендеринг</span>
+              <span className="note">events приходят с сервера</span>
+            </div>
+          </div>
 
-          <Link href="/ssr2" prefetch={false}>
-            <a>SSR2 prefetch=false</a>
-          </Link>
+          <div className="linkWrap">
+            <Link href="/ssr2" prefetch={false} passHref>
+              <a>SSR2</a>
+            </Link>
+            <div className="description">
+                <span className="note">Динамический серверный рендеринг</span>
+                <span className="note">events приходят с сервера</span>
+                <span className="note">prefetch=false</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -46,7 +82,7 @@ export default function Home() {
 
         .subwrapper {
           text-align: center;
-          padding-top: 150px;
+          padding-top: 125px;
         }
 
         .links {
@@ -58,12 +94,38 @@ export default function Home() {
 
         h1 {
           font-size: 50px;
-          margin-bottom: 100px;
+          margin-bottom: 75px;
         }
 
         a {
           padding: 20px;
           font-size: 40px;
+          text-decoration: underline;
+        }
+
+        .note {
+          font-size: 16px;
+        }
+
+        .section {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .linkWrap {
+          display: flex;
+          align-items: baseline;
+          width: 500px;
+          justify-content: space-around;
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 300px;
         }
       `}</style>
     </div>
