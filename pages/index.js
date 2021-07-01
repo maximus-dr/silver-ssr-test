@@ -30,11 +30,11 @@ export default function Home() {
             <a>SSG</a>
           </Link>
 
-          <Link href="/ssr">
+          <Link href="/ssr1" prefetch={true}>
             <a>SSR</a>
           </Link>
 
-          <Link href="/ssr2">
+          <Link href="/ssr2" prefetch={true}>
             <a>SSR2</a>
           </Link>
         </div>
