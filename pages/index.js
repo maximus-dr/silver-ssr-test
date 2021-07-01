@@ -33,6 +33,10 @@ export default function Home() {
           <Link href="/ssr">
             <a>SSR</a>
           </Link>
+
+          <Link href="/ssr2">
+            <a>SSR2</a>
+          </Link>
         </div>
       </div>
 
@@ -51,7 +55,7 @@ export default function Home() {
         }
 
         .links {
-          width: 200px;
+          width: 300px;
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
