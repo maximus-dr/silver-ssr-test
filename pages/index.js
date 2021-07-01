@@ -1,13 +1,9 @@
 import axios from 'axios';
-import { renderComponents } from '../core/functions/render';
 import { API_ALL_EVENTS } from '../core/rest/paths';
-const path = require('path');
-const fs = require('fs');
+import Link from 'next/link'
 
 
 export async function getStaticProps() {
-  const dbPath = path.join(process.cwd(), 'db/db.json');
-  const components = fs.readFileSync(dbPath, 'utf8');
 
   const events = await axios.get(`https://soft.silverscreen.by:8443${API_ALL_EVENTS}`, {})
     .then(res => res.data)
@@ -15,7 +11,6 @@ export async function getStaticProps() {
   
   return {
     props: {
-      components: JSON.parse(components),
       events
     },
     revalidate: 1
@@ -23,13 +18,54 @@ export async function getStaticProps() {
 }
 
 
-export default function Home(props) {
+export default function Home() {
 
-  const Components = renderComponents(props.components);
 
   return (
-    <>
-      {Components}
-    </>
+    <div className="wrapper">
+      <div className="subwrapper">
+        <h1>Test</h1>
+        <div className="links">
+          <Link href="/ssg">
+            <a>SSG</a>
+          </Link>
+
+          <Link href="/ssr">
+            <a>SSR</a>
+          </Link>
+        </div>
+      </div>
+
+      <style jsx>{`
+
+        .wrapper {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 100vh;
+        }
+
+        .subwrapper {
+          text-align: center;
+          padding-top: 300px;
+        }
+
+        .links {
+          width: 200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        h1 {
+          font-size: 50px;
+          margin-bottom: 100px;
+        }
+
+        a {
+          font-size: 40px;
+        }
+      `}</style>
+    </div>
   )
 }
