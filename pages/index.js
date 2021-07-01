@@ -1,21 +1,4 @@
-import axios from 'axios';
-import { API_ALL_EVENTS } from '../core/rest/paths';
 import Link from 'next/link'
-
-
-export async function getStaticProps() {
-
-  const events = await axios.get(`https://soft.silverscreen.by:8443${API_ALL_EVENTS}`, {})
-    .then(res => res.data)
-    .catch(err => console.log(err));
-  
-  return {
-    props: {
-      events
-    },
-    revalidate: 1
-  }
-}
 
 
 export default function Home() {
@@ -30,11 +13,11 @@ export default function Home() {
             <a>SSG</a>
           </Link>
 
-          <Link href="/ssr1" prefetch={true}>
+          <Link href="/ssr1">
             <a>SSR</a>
           </Link>
 
-          <Link href="/ssr2" prefetch={true}>
+          <Link href="/ssr2">
             <a>SSR2</a>
           </Link>
         </div>
