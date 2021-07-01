@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Ubuntu";
-  src: url("/fonts/Ubuntu-Regular.ttf");
+  src: url("/fonts/Ubuntu-Regular.woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("/fonts/Ubuntu-Medium.ttf");
+  src: url("/fonts/Ubuntu-Medium.woff");
   font-style: medium;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("/fonts/Ubuntu-Bold.ttf");
+  src: url("/fonts/Ubuntu-Bold.woff");
   font-style: bold;
   font-weight: 700;
   font-display: swap;
