@@ -13,12 +13,24 @@ export default function Home() {
             <a>SSG</a>
           </Link>
 
+          <Link href="/ssg" prefetch={false}>
+            <a>SSG prefetch=false</a>
+          </Link>
+
           <Link href="/ssr1">
             <a>SSR</a>
           </Link>
 
+          <Link href="/ssr1" prefetch={false}>
+            <a>SSR prefetch=false</a>
+          </Link>
+
           <Link href="/ssr2">
             <a>SSR2</a>
+          </Link>
+
+          <Link href="/ssr2" prefetch={false}>
+            <a>SSR2 prefetch=false</a>
           </Link>
         </div>
       </div>
@@ -34,14 +46,14 @@ export default function Home() {
 
         .subwrapper {
           text-align: center;
-          padding-top: 300px;
+          padding-top: 150px;
         }
 
         .links {
-          width: 300px;
           margin: 0 auto;
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         h1 {
@@ -50,6 +62,7 @@ export default function Home() {
         }
 
         a {
+          padding: 20px;
           font-size: 40px;
         }
       `}</style>
